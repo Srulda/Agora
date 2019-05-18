@@ -21,6 +21,9 @@ class Market extends Component {
     let inventory = this.props.inventory;
     return (
       <div>
+       <h2>What Do You Want To Sell ? </h2>
+        <input onChange={this.handleChange} />
+        <button className = "rotate-center" onClick={this.addItem}>Add</button>
         <div id ="numItems">
           There is{" "}
           {this.props.inventory.numItems === 0
@@ -28,11 +31,10 @@ class Market extends Component {
             : this.props.inventory.numItems}{" "}
           items available in the store !
         </div>
-        <input onChange={this.handleChange} />
-        <button onClick={this.addItem}>Add</button>
         {inventory.items.map(i => (
           <Item item={i} store={this.props.store} key={i.name + i.price} />
         ))}{" "}
+        
       </div>
     );
   }

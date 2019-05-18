@@ -19,8 +19,8 @@ class Item extends Component {
     return (
       <div>
         <li>
-          {item.quantity} {item.name} available at{" "}
-        <span id = "itemPrice" onClick = {this.changePrice}>{item.price} </span> per item
+          <span id ="item">{item.quantity} {item.name}</span> <br></br> available at{" "}
+        <span id = "item" onClick = {this.changePrice}>{item.price} </span> per item
           <button onClick={this.buyItem}>Buy</button>
         </li>
       </div>
